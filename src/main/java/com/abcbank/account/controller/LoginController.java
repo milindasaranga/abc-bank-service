@@ -35,6 +35,12 @@ public class LoginController {
     @Autowired
     private SecurityUtil securityUtil;
 
+    /**
+     *
+     * @param request
+     * @return
+     * @throws Exception
+     */
     @PostMapping("/authenticate")
     public ResponseEntity<?> authenticateUser(@RequestBody AuthRequest request) throws Exception {
         try {

@@ -17,6 +17,12 @@ public class AuthUserServiceImpl implements UserDetailsService {
     @Autowired
     UserRepository userRepo;
 
+    /**
+     *
+     * @param username
+     * @return
+     * @throws UsernameNotFoundException
+     */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<User> user = userRepo.findByUsername(username);
